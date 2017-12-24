@@ -110,6 +110,18 @@ def crawl():
     if choice == 'r':
         cave_rested()
 
+def crawl_torch():
+    choice = input("""
+            You barely manage to crawl through the hole. You come out the other side,
+            and see a faint beam of light poking through the rocks. When you look closer,
+            you can see outside the cave! The rocks are way too heavy and compacted to
+            move by hand. If you had some kind of tool, then you might be able to escape!
+
+            Press R to Return to the cave
+            """)
+    if choice == 'r':
+        cave_torch()
+
 
 def dark():
     print("""
@@ -150,7 +162,7 @@ def cave_torch():
         if choice == 'r':
             cave_torch()
     elif choice == 'c':
-        crawl()
+        crawl_torch()
 
 
 
